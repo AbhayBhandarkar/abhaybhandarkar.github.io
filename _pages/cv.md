@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 {% include base_path %}
-
+----------------------------------------------------------------------------
 Education
 ======
 * B.E in Computer Science and Engineering, Ramaiah Institute of Technology, 2022-2026
