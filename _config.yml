@@ -22,20 +22,19 @@ author:
 
   # Academic websites
   arxiv: # URL (Optional)
-  googlescholar: "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar: "https://scholar.google.com/citations?user=hFilxmsAAAAJ&hl=en"
   orcid: "http://orcid.org/yourorcidurl"
   pubmed: "https://www.ncbi.nlm.nih.gov/pubmed/?term=abhay+example"
   researchgate: # URL (Optional)
 
   # Repositories and software development
-  github: "your-github-username"
+  github: "https://github.com/AbhayBhandarkar"
   kaggle: "your-kaggle-username"  
   stackoverflow: "your-stackoverflow-username"
 
   # Social media
-  linkedin: "your-linkedin-username"
+  linkedin: "www.linkedin.com/in/abhaybhandarkar"
   twitter: "your-twitter-username" # X / Twitter
-  youtube: "your-youtube-username" # Optional
 
 # Site Settings
 teaser: "teaser-image.png" # filename of teaser fallback image placed in /images/
