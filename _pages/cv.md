@@ -25,34 +25,13 @@ Work experience
 Skills
 ======
 * Programming Languages
-  * C/C++
-  * Python
-  * Dart
-  * MATLAB (solving calculus)
-  * HTML
-  * CSS
-  * React.js
-  * Julia (basics)
+  * C/C++, Python, Dart, MATLAB (solving calculus), HTML, CSS, React.js, Julia (basics)
 
 * Frameworks and Tools
-  * PyTorch
-  * Google Collab
-  * VSCode
-  * Flutter
-  * Firebase
+  * PyTorch, Google Collab, VSCode, Flutter, Firebase
   
 * Deep Learning and Machine Learning Libraries and Tools
-  * TensorFlow
-  * Keras
-  * scikit-learn
-  * XGBoost
-  * LightGBM
-  * FastText
-  * GloVe
-  * Transformers (e.g., BERT, GPT)
-  * SHAP
-  * LIME
-  * LazyPredict
+  * TensorFlow, Keras, scikit-learn, XGBoost, LightGBM, FastText, GloVe, Transformers (e.g., BERT, GPT), SHAP, LIME, LazyPredict
 
 Publications
 ======
