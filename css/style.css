@@ -1,0 +1,672 @@
+/* academic_style_refined_nature_header.css - Refined AcademicPages Style with Nature Header & Quote Color */
+
+/* Font Import -  Lato and Source Code Pro */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Code+Pro:wght@400&display=swap');
+
+/* Enhanced Color Palette - Academic with Nature Accents */
+:root {
+    --primary-color: #222222;       /* Dark Gray - Main text, slightly softer than black */
+    --secondary-color: #007bff;     /* Slightly Brighter Blue - Links, primary accents */
+    --accent-color: #dc3545;        /* Red - Error/Highlight, used sparingly */
+    --text-color-light: #495057;    /* Medium Gray - Body text, softer */
+    --text-color-dark: #f8f9fa;     /* Off-White - Text on dark backgrounds */
+    --bg-color-light: #f8f9fa;      /* Off-White - Main background, warmer */
+    --bg-color-dark: #343a40;       /* Dark Gray - Dark mode background */
+    --line-color: #d3d3d3;         /* Light Gray - Dividers, softer gray */
+    --nav-bg: #f8f9fa;             /* Off-White - Navigation background */
+    --header-bg: #f8f9fa;           /* Off-White - Default Header background */
+    --footer-bg: #f8f9fa;           /* Off-White - Footer background */
+    --code-bg: #e9ecef;            /* Light Gray - Code block background, cooler gray */
+    --section-title-color: var(--secondary-color); /* Blue - Section Titles */
+    --link-color: var(--secondary-color);      /* Blue - Links */
+    --link-hover-color: var(--accent-color);  /* Red - Link Hover */
+    --button-bg-color: var(--secondary-color); /* Blue - Button Background */
+    --button-text-color: var(--bg-color-light); /* Off-White - Button Text */
+    --button-hover-bg-color: #0056b3; /* Darker Blue - Button Hover */
+    --sanskrit-quote-bg: #fffacd;   /* Light Yellow - Sanskrit Quote Background */
+}
+
+/* Reset and General Styles - Streamlined and Clear */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Slightly larger base font for better readability */
+}
+
+body, html {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.65; /* Adjusted line height for better readability */
+    color: var(--text-color-light);
+    background-color: var(--bg-color-light);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+
+/* Container - Standard and Consistent */
+.container {
+    max-width: 1100px; /* Slightly wider container for content breathing room */
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.image-header {
+    position: relative;
+    background-color: var(--header-bg);
+    color: var(--text-color-dark);
+    padding: 5rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--line-color);
+    margin-bottom: 0;
+    height: 300px; /* Add fixed height */
+    overflow: hidden;
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3); /* Add subtle dark overlay */
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.header-text h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-family: 'Lato', sans-serif;
+    font-size: 3.2em;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    line-height: 1.2;
+}
+
+/* Main Navigation - Improved Sticky Nav */
+.main-nav {
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--line-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav-container {
+    display: flex;
+    justify-content: center; /* Changed to center to remove left space */
+    align-items: center;
+    overflow-x: auto;
+    padding: 0 25px;
+}
+
+.main-nav a {
+    color: var(--primary-color);
+    padding: 1.1rem 1.7rem; /* Adjusted horizontal padding for nav links */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder nav text */
+    font-size: 1.05em; /* Slightly larger nav font */
+    margin: 0;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease; /* Smoother transitions */
+    border-bottom: 3px solid transparent; /* Thicker underline */
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--link-hover-color); /* Red on hover/active - using link hover color var */
+    background-color: transparent;
+    border-bottom-color: var(--link-hover-color); /* Red underline on hover/active */
+}
+
+/* Main Content - Enhanced Section Styling */
+.main-content {
+    padding: 25px 0; /* Slightly increased content padding */
+}
+
+.main-section {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    padding: 30px; /* Slightly increased section padding */
+    margin-bottom: 25px; /* Slightly increased section margin */
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.main-section:last-child {
+    border-bottom: none;
+}
+
+.main-section h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.4em; /* Slightly larger section titles */
+    color: var(--section-title-color); /* Blue Section Titles - using section title color var */
+    margin-top: 0;
+    margin-bottom: 1.1em; /* Slightly increased bottom margin */
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid var(--section-title-color); /* Blue underline - thicker */
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.main-section h3 {
+    font-size: 1.6em; /* Slightly larger sub-heading size */
+    color: var(--primary-color);
+    margin-top: 1.1em; /* Slightly increased top margin */
+    margin-bottom: 0.7em;
+    font-weight: 600;
+}
+
+/* Profile Header - Refined Profile Styling */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.8rem; /* Slightly increased bottom margin */
+    padding-bottom: 1.8rem; /* Slightly increased bottom padding */
+    border-bottom: 1.5px solid var(--line-color); /* Slightly thicker border */
+}
+
+.profile-header .profile-pic {
+    width: 200px; /* Slightly larger profile pic */
+    height: 200px;
+    object-fit: cover;
+    margin-right: 25px; /* Slightly increased right margin */
+    border: 1.5px solid var(--line-color); /* Slightly thicker border */
+    box-shadow: 0 0 0 3px var(--bg-color-light); /* Subtle white ring around pic */
+}
+
+.profile-header .header-text h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2.6em; /* Slightly larger profile name */
+    color: var(--primary-color);
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.1em;
+    line-height: 1.1;
+}
+
+.profile-header .header-text p {
+    font-size: 1.1em; /* Slightly larger description text */
+    color: #6c757d; /* Muted description color, softer gray */
+    margin-top: 0;
+    font-weight: 400;
+}
+
+/* Sanskrit Quote -  Light Yellow Background */
+.sanskrit-quote {
+    text-align: center;
+    margin-bottom: 2.5rem; /* Slightly increased bottom margin */
+    padding: 1.2rem; /* Slightly increased padding */
+    background-color: var(--sanskrit-quote-bg); /* Light Yellow Background - using new variable */
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    font-style: italic;
+    border-left: 3px solid var(--secondary-color); /* Blue left border for subtle accent */
+    border-right: 3px solid var(--secondary-color); /* Blue right border for subtle accent */
+}
+
+.sanskrit-quote .quote {
+    font-size: 1.3em; /* Slightly larger quote size */
+    color: var(--primary-color);
+    margin-bottom: 0.6em;
+    line-height: 1.7;
+}
+
+.sanskrit-quote .meaning {
+    font-size: 1.0em;
+    color: #777777;
+}
+
+/* About Links - Enhanced Buttons/Icons */
+.about-links {
+    text-align: center;
+    margin-bottom: 3rem; /* Slightly increased bottom margin */
+}
+
+.about-links .button {
+    background-color: var(--button-bg-color); /* Blue Button Background - using button color var */
+    color: var(--button-text-color);      /* Off-White Button Text - using button color var */
+    padding: 12px 24px; /* Slightly increased button padding */
+    border-radius: 6px; /* Slightly more rounded buttons */
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Smoother transitions */
+    border: 1px solid transparent; /* Add border for hover effect */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.about-links .button:hover {
+    background-color: var(--button-hover-bg-color); /* Darker Blue on Hover - using button hover color var */
+    transform: translateY(-2px); /* Slight lift on hover */
+    border-color: var(--line-color); /* Border color on hover */
+}
+
+.about-links a {
+    color: var(--link-color);    /* Blue Icons - using link color var */
+    font-size: 1.5em; /* Slightly larger icons */
+    margin: 0 12px; /* Slightly increased icon margin */
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease; /* Smoother transitions */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-links a:hover {
+    color: var(--link-hover-color);         /* Red Icon Hover - using link hover color var */
+    transform: scale(1.1); /* Slight scale up on hover */
+}
+
+/* Section Divider -  Refined Line */
+.section-divider {
+    border: none;
+    border-bottom: 1.2px dashed var(--line-color); /* Slightly thicker, dashed line */
+    margin: 2.5rem 0; /* Slightly increased margin */
+    opacity: 0.85; /* Slightly less transparent */
+}
+
+/* Interests List - Improved List Styling */
+.interests-list {
+    padding-left: 25px; /* Slightly increased padding */
+    margin-bottom: 1.8em; /* Slightly increased bottom margin */
+}
+
+.interests-list li {
+    margin-bottom: 0.8em; /* Slightly increased item margin */
+    list-style-type: disc;
+    color: var(--text-color-light);
+    font-size: 1.05em; /* Slightly larger list font */
+    line-height: 1.7;
+    marker-color: var(--secondary-color); /* Blue bullet color */
+}
+
+/* Publications - Enhanced List Style */
+.pub-legend {
+    font-size: 1.05em; /* Slightly larger legend font */
+    color: #6c757d; /* Muted legend text, softer gray */
+    margin-bottom: 2.2em; /* Slightly increased bottom margin */
+    font-style: italic;
+    text-align: left;
+}
+
+.publication {
+    display: block;
+    padding: 0;
+    margin-bottom: 1.7em; /* Slightly increased bottom margin */
+    border-bottom: 1.2px dashed var(--line-color); /* Slightly thicker dashed line */
+    padding-bottom: 0.5em; /* Added padding below publication for spacing */
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.pub-type {
+    display: none; /* Still hiding publication type for list style */
+}
+
+.pub-details {
+    flex-grow: 1;
+}
+
+.pub-details .pub-title {
+    margin: 0 0 0.5em 0; /* Slightly increased bottom margin */
+    font-size: 1.25em; /* Slightly larger publication titles */
+    color: var(--link-color);    /* Blue publication title - using link color var */
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.pub-details .pub-title a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease; /* Smoother transition */
+}
+
+.pub-details .pub-title a:hover {
+    color: var(--link-hover-color);         /* Red title hover - using link hover color var */
+}
+
+.pub-details .pub-authors {
+    font-style: italic;
+    margin-bottom: 0.4em; /* Slightly increased bottom margin */
+    color: #555555;
+    font-size: 1.0em;
+}
+
+.pub-details .pub-venue {
+    font-size: 1.0em;
+    color: #777777;
+    margin-bottom: 0.4em; /* Slightly increased bottom margin */
+}
+
+.pub-details .keywords {
+    font-size: 0.95em; /* Slightly larger keyword font */
+    color: #868e96; /* Muted keywords, slightly darker gray */
+    margin-top: 0;
+}
+
+/* Code Blocks - Improved Code Styling */
+pre, code {
+    font-family: 'Source Code Pro', monospace;
+    background-color: var(--code-bg);
+    padding: 0.6em 0.8em; /* Slightly increased code padding */
+    border-radius: 5px; /* Slightly more rounded code blocks */
+    font-size: 0.95em; /* Slightly larger code font */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    border: 1px solid var(--line-color); /* Added border to code blocks */
+}
+
+pre {
+    padding: 1.2em; /* Slightly increased pre padding */
+    line-height: 1.55; /* Adjusted line height for code blocks */
+}
+
+/* Footer - Refined Footer Style */
+footer {
+    background-color: var(--footer-bg);
+    color: #6c757d; /* Muted footer text, softer gray */
+    text-align: center;
+    padding: 1.8rem 0; /* Slightly increased footer padding */
+    margin-top: 3.5rem; /* Slightly increased top margin */
+    border-top: 1.2px solid var(--line-color); /* Slightly thicker top border */
+    font-size: 0.95em; /* Slightly larger footer font */
+    letter-spacing: 0.015em; /* Slightly increased letter spacing */
+    opacity: 0.95; /* Slightly less transparent */
+}
+
+/* Responsive Adjustments - Fine-tuned Responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 96%;
+    }
+    .image-header {
+        padding: 3rem 0; /* Adjusted padding for image header responsiveness */
+        margin-bottom: 1.6rem;
+    }
+    .header-text h1 {
+        font-size: 2.6em;
+    }
+    .main-nav a {
+        padding: 1.0rem 1.2rem;
+        font-size: 1.0em;
+    }
+    .main-section {
+        padding: 28px;
+        margin-bottom: 22px;
+    }
+    .main-section h2 {
+        font-size: 2.2em;
+        margin-bottom: 1.0em;
+    }
+    .profile-header {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .profile-header .profile-pic {
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+    }
+    .profile-header .header-text h2 {
+        font-size: 2.4em;
+    }
+    .sanskrit-quote {
+        padding: 1.4rem;
+        margin-bottom: 2rem;
+    }
+    .sanskrit-quote .quote {
+        font-size: 1.2em;
+    }
+    .about-links .button {
+        padding: 11px 22px;
+        font-size: 0.98em;
+        margin: 0 7px;
+    }
+    .about-links a {
+        font-size: 1.4em;
+        margin: 0 9px;
+    }
+    .publication {
+        margin-bottom: 1.5em;
+    }
+    .pub-details .pub-title {
+        font-size: 1.2em;
+        margin-bottom: 0.4em;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 97%;
+    }
+    .image-header {
+        padding: 3rem 0; /* Adjusted padding for image header responsiveness */
+        margin-bottom: 1.4rem;
+    }
+    .header-text h1 {
+        font-size: 2.5em;
+    }
+    .main-nav a {
+        padding: 0.95rem 1.15rem;
+        font-size: 0.98em;
+    }
+    .main-section {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+    .main-section h2 {
+        font-size: 2.1em;
+        margin-bottom: 0.95em;
+    }
+    .profile-header {
+        margin-bottom: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+    .profile-header .profile-pic {
+        width: 85px;
+        height: 85px;
+        margin-right: 18px;
+    }
+    .profile-header .header-text h2 {
+        font-size: 2.3em;
+    }
+    .sanskrit-quote {
+        padding: 1.3rem;
+        margin-bottom: 1.9rem;
+    }
+    .sanskrit-quote .quote {
+        font-size: 1.18em;
+    }
+    .about-links .button {
+        padding: 10px 20px;
+        font-size: 0.96em;
+        margin: 0 6.5px;
+    }
+    .about-links a {
+        font-size: 1.35em;
+        margin: 0 8.5px;
+    }
+    .publication {
+        margin-bottom: 1.4em;
+    }
+    .pub-details .pub-title {
+        font-size: 1.18em;
+        margin-bottom: 0.38em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .image-header {
+        padding: 4rem 0; /* Adjusted padding for image header responsiveness */
+        margin-bottom: 1.2rem;
+    }
+    .header-text h1 {
+        font-size: 2.2em;
+    }
+    .main-nav {
+        margin-bottom: 2.2rem;
+    }
+    .main-nav-container {
+        padding: 0;
+    }
+    .main-nav a {
+        padding: 1.1rem 1.3rem;
+        font-size: 1.0em;
+    }
+    .main-section {
+        padding: 22px;
+        margin-bottom: 18px;
+    }
+    .main-section h2 {
+        font-size: 2.0em;
+        margin-bottom: 0.9em;
+    }
+    .profile-header {
+        margin-bottom: 1.6rem;
+        padding-bottom: 1.6rem;
+    }
+    .profile-header .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    .profile-header .header-text h2 {
+        font-size: 2.1em;
+    }
+    .sanskrit-quote {
+        padding: 1.2rem;
+        margin-bottom: 1.8rem;
+    }
+    .sanskrit-quote .quote {
+        font-size: 1.15em;
+    }
+    .about-links .button {
+        padding: 9px 18px;
+        font-size: 0.95em;
+        margin: 0 6px;
+        margin-bottom: 7px;
+    }
+    .about-links a {
+        font-size: 1.3em;
+        margin: 0 8px;
+    }
+    .publication {
+        margin-bottom: 1.3em;
+    }
+    .pub-details .pub-title {
+        font-size: 1.15em;
+        margin-bottom: 0.35em;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 15px;
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .image-header {
+        /* ... other styles ... */
+        position: relative; /* Essential for positioning the overlay and image */
+        overflow: hidden; /* Keeps the image within the header bounds */
+    }
+    
+    .header-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Image behind content */
+        opacity: 0.7;
+        /* content: url('https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/72/68/de.jpg');  You can keep this or use the HTML <img> tag */
+    }
+    
+    .header-overlay {
+        position: absolute;  /* Changed to absolute */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        flex-direction: column; /* Align items in a column */
+        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent overlay for better text readability */
+        color: inherit;
+        padding: 2rem;
+    }
+    
+    .header-content {
+        text-align: center; /* Center the text within the overlay */
+    }
+    
+    .header-text h1 {
+        /* ... other styles ... */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        color: #fff; /* Ensure good contrast with the overlay */
+    }
+    .profile-header .profile-pic {
+        width: 70px;
+        height: 70px;
+    }
+    .profile-header .header-text h2 {
+        font-size: 2.0em;
+    }
+    .main-section h2 {
+        font-size: 1.9em;
+    }
+    .sanskrit-quote .quote {
+        font-size: 1.1em;
+    }
+    .about-links .button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    .about-links a {
+        font-size: 1.2em;
+    }
+    footer {
+        padding: 1.5rem 0;
+        margin-top: 3rem;
+    }
+}
