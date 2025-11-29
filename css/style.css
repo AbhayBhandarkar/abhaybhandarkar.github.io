@@ -1,214 +1,387 @@
-/* academic_style_refined_nature_header.css - Refined AcademicPages Style with Nature Header & Quote Color */
+/* Academic Portfolio Style - Inspired by Jon Barron */
 
-/* Font Import -  Lato and Source Code Pro */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Code+Pro:wght@400&display=swap');
-
-/* Enhanced Color Palette - Academic with Nature Accents */
-:root {
-    --primary-color: #222222;       /* Dark Gray - Main text, slightly softer than black */
-    --secondary-color: #007bff;     /* Slightly Brighter Blue - Links, primary accents */
-    --accent-color: #dc3545;        /* Red - Error/Highlight, used sparingly */
-    --text-color-light: #495057;    /* Medium Gray - Body text, softer */
-    --text-color-dark: #f8f9fa;     /* Off-White - Text on dark backgrounds */
-    --bg-color-light: #f8f9fa;      /* Off-White - Main background, warmer */
-    --bg-color-dark: #343a40;       /* Dark Gray - Dark mode background */
-    --line-color: #d3d3d3;         /* Light Gray - Dividers, softer gray */
-    --nav-bg: #f8f9fa;             /* Off-White - Navigation background */
-    --header-bg: #f8f9fa;           /* Off-White - Default Header background */
-    --footer-bg: #f8f9fa;           /* Off-White - Footer background */
-    --code-bg: #e9ecef;            /* Light Gray - Code block background, cooler gray */
-    --section-title-color: var(--secondary-color); /* Blue - Section Titles */
-    --link-color: var(--secondary-color);      /* Blue - Links */
-    --link-hover-color: var(--accent-color);  /* Red - Link Hover */
-    --button-bg-color: var(--secondary-color); /* Blue - Button Background */
-    --button-text-color: var(--bg-color-light); /* Off-White - Button Text */
-    --button-hover-bg-color: #0056b3; /* Darker Blue - Button Hover */
-    --sanskrit-quote-bg: #fffacd;   /* Light Yellow - Sanskrit Quote Background */
-}
-
-/* Reset and General Styles - Streamlined and Clear */
+/* Reset */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Base Styles */
 html {
     scroll-behavior: smooth;
-    font-size: 16px; /* Slightly larger base font for better readability */
 }
 
-body, html {
-    font-family: 'Lato', sans-serif;
-    line-height: 1.65; /* Adjusted line height for better readability */
-    color: var(--text-color-light);
-    background-color: var(--bg-color-light);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    word-wrap: break-word;
-    overflow-x: hidden;
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #ffffff;
+    padding: 20px;
 }
 
-/* Container - Standard and Consistent */
-.container {
-    max-width: 1100px; /* Slightly wider container for content breathing room */
-    margin: 0 auto;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-
-.image-header {
-    position: relative;
-    background-color: var(--header-bg);
-    color: var(--text-color-dark);
-    /* Remove fixed height: height: 300px; */
-    min-height: 200px; /* Set a minimum height */
-    padding: 3rem 0; /* Use padding for vertical spacing */
-    text-align: center;
-    border-bottom: 1px solid var(--line-color);
-    margin-bottom: 0;
-    overflow: hidden; /* Keep this for containing the image */
-}
-
-.header-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Header Banner */
+.header-banner {
     width: 100%;
-    height: 100%;
+    max-height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.header-image img {
+.header-banner img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Or object-fit: contain; if you don't want cropping */
-    display: block; /* Important: Prevents a small space below the image */
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
-/* Media Query Example (for smaller screens) */
-@media (max-width: 768px) {
-    .image-header {
-        min-height: 150px; /* Adjust min-height for mobile */
-        padding: 2rem 0; /* Adjust padding if needed */
-    }
-
-    .header-text h1 {
-        font-size: 1.8em; /* Or whatever size is suitable */
-    }
+/* Name styling */
+.name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 15px;
+    padding: 0;
 }
 
-.header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3); /* Add subtle dark overlay */
-}
-
-.header-content {
-    position: relative;
-    z-index: 2;
-}
-
-.header-text h1 {
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    font-family: 'Lato', sans-serif;
-    font-size: 3.2em;
-    font-weight: 700;
-    margin-bottom: 0.2em;
-    line-height: 1.2;
-}
-
-/* Main Navigation - Improved Sticky Nav */
-.main-nav {
-    background-color: var(--nav-bg);
-    border-bottom: 1px solid var(--line-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.main-nav-container {
-    display: flex;
-    justify-content: center; /* Changed to center to remove left space */
-    align-items: center;
-    overflow-x: auto;
-    padding: 0 25px;
-}
-
-.main-nav a {
-    color: var(--primary-color);
-    padding: 1.1rem 1.7rem; /* Adjusted horizontal padding for nav links */
+/* Links */
+a {
+    color: #0066cc;
     text-decoration: none;
-    font-weight: 500; /* Slightly bolder nav text */
-    font-size: 1.05em; /* Slightly larger nav font */
-    margin: 0;
-    transition: color 0.2s ease, border-bottom-color 0.2s ease; /* Smoother transitions */
-    border-bottom: 3px solid transparent; /* Thicker underline */
 }
 
-.main-nav a:hover, .main-nav a.active {
-    color: var(--link-hover-color); /* Red on hover/active - using link hover color var */
-    background-color: transparent;
-    border-bottom-color: var(--link-hover-color); /* Red underline on hover/active */
+a:hover {
+    color: #aa0000;
 }
 
-/* Main Content - Enhanced Section Styling */
-.main-content {
-    padding: 25px 0; /* Slightly increased content padding */
+/* Strong text */
+strong {
+    color: #111111;
 }
 
-.main-section {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-    padding: 30px; /* Slightly increased section padding */
-    margin-bottom: 25px; /* Slightly increased section margin */
-    border-radius: 0;
-    box-shadow: none;
-    border-bottom: 1px solid var(--line-color);
-}
-
-.main-section:last-child {
+/* Headings */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111111;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
     border-bottom: none;
 }
 
-.main-section h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 2.4em; /* Slightly larger section titles */
-    color: var(--section-title-color); /* Blue Section Titles - using section title color var */
-    margin-top: 0;
-    margin-bottom: 1.1em; /* Slightly increased bottom margin */
-    padding-bottom: 0.5em;
-    border-bottom: 3px solid var(--section-title-color); /* Blue underline - thicker */
-    display: inline-block;
-    font-weight: 700;
-    letter-spacing: -0.015em;
+h3 {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 8px;
 }
 
-.main-section h3 {
-    font-size: 1.6em; /* Slightly larger sub-heading size */
-    color: var(--primary-color);
-    margin-top: 1.1em; /* Slightly increased top margin */
-    margin-bottom: 0.7em;
-    font-weight: 600;
+/* Paragraphs */
+p {
+    margin-bottom: 12px;
 }
 
-/* Profile Header - Refined Profile Styling */
-.profile-header {
+/* Sanskrit Quote */
+.sanskrit-quote {
+    background-color: #fffacd;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border-left: 4px solid #d4a017;
+}
+
+.sanskrit-quote .quote {
+    font-family: 'Noto Sans Devanagari', 'Arial Unicode MS', sans-serif;
+    font-size: 16px;
+    color: #5c4a1f;
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.sanskrit-quote .meaning {
+    font-size: 13px;
+    color: #666666;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+/* Enhanced Sanskrit Quote */
+.sanskrit-quote-enhanced {
+    background: linear-gradient(135deg, #fff9e6 0%, #fffacd 50%, #fff5cc 100%);
+    padding: 30px 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    border: 2px solid #d4a017;
+    box-shadow: 0 4px 15px rgba(212, 160, 23, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+.sanskrit-quote-enhanced .quote-decoration {
+    font-family: 'Noto Sans Devanagari', serif;
+    font-size: 28px;
+    color: #c9a227;
+    margin: 8px 0;
+    opacity: 0.8;
+}
+
+.sanskrit-quote-enhanced .sanskrit-text {
+    font-family: 'Noto Sans Devanagari', 'Arial Unicode MS', serif;
+    font-size: 20px;
+    color: #8b6914;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
+}
+
+.sanskrit-quote-enhanced .quote-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4a017, transparent);
+    margin: 18px auto;
+}
+
+.sanskrit-quote-enhanced .quote-meaning {
+    font-size: 14px;
+    color: #666666;
+    font-style: italic;
+    margin-bottom: 3px;
+    line-height: 1.7;
+}
+
+/* Paper title styling */
+.papertitle {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 15px;
+}
+
+.papertitle:hover {
+    color: #aa0000;
+}
+
+/* Highlight for important papers */
+.highlight {
+    background-color: #ffffd0;
+    padding: 2px 4px;
+}
+
+.highlight-paper {
+    background-color: #ffffd0;
+}
+
+/* Paper image container */
+.paper-img {
+    width: 160px;
+    height: 120px;
     display: flex;
     align-items: center;
-    margin-bottom: 1.8rem; /* Slightly increased bottom margin */
-    padding-bottom: 1.8rem; /* Slightly increased bottom padding */
-    border-bottom: 1.5px solid var(--line-color); /* Slightly thicker border */
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
+.paper-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Patent icon */
+.patent-icon {
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ongoing work list */
+.ongoing-list {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin: 0;
+}
+
+.ongoing-list li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Profile image hover effect */
+.hoverZoomLink {
+    transition: transform 0.3s ease;
+}
+
+.hoverZoomLink:hover {
+    transform: scale(1.05);
+}
+
+/* Experience page styles */
+.experience-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.experience-title {
+    font-weight: bold;
+    color: #0066cc;
+    font-size: 16px;
+}
+
+.experience-company {
+    color: #333333;
+    font-weight: 500;
+}
+
+.experience-date {
+    color: #666666;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.experience-location {
+    color: #888888;
+    font-size: 13px;
+}
+
+.experience-description {
+    margin-top: 8px;
+}
+
+.experience-description ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.experience-description li {
+    margin-bottom: 5px;
+}
+
+/* Skills section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    color: #333333;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+/* Section colored boxes like Jon Barron */
+.colored-box {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.colored-box h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #333333;
+    border-bottom: none;
+}
+
+/* Navigation for experience page */
+.nav-links {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .name {
+        font-size: 24px;
+    }
+    
+    .header-banner {
+        max-height: 120px;
+    }
+    
+    .header-banner img {
+        height: 120px;
+    }
+    
+    table {
+        display: block;
+    }
+    
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    td {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px !important;
+    }
+    
+    .paper-img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+        margin: 0 auto 15px auto;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+    }
+    
+    .experience-date {
+        margin-top: 5px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    .header-banner {
+        display: none;
+    }
+}
 .profile-header .profile-pic {
-    width: 200px; /* Slightly larger profile pic */
     height: 200px;
     object-fit: cover;
     margin-right: 25px; /* Slightly increased right margin */
